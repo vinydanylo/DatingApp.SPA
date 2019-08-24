@@ -1,12 +1,9 @@
+
+import {throwError as observableThrowError,  Observable ,  BehaviorSubject } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient, Headers, RequestOptions, Response } from '@angular/http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
-import { Observable } from 'rxjs/Observable';
 import { tokenNotExpired, JwtHelper } from 'angular2-jwt';
 import { User } from '../_models/User';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class AuthService {
@@ -63,7 +60,7 @@ export class AuthService {
   private handleError(error: any) {
     const applicationError = error.headers.get('Application-Error');
     if (applicationError) {
-      return Observable.throw(applicationError);
+      return observableThrowError(applicationError);
     }
     const serverError = error.json();
     let modelStateErrors = '';
@@ -74,6 +71,6 @@ export class AuthService {
         }
       }
     }
-    return Observable.throw(modelStateErrors || 'Server error');
+    return observableThrowError(modelStateErrors || 'Server error');
   }
 }
