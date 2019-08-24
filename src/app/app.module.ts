@@ -46,7 +46,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     FormsModule,
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes),
