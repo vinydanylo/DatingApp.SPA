@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css']
 })
-export class AuthComponent extends OnInit {
+export class AuthComponent implements OnInit {
 
   constructor() { }
 

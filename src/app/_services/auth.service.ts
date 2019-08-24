@@ -1,7 +1,7 @@
 
 import {throwError as observableThrowError,  Observable ,  BehaviorSubject } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { HttpClient, Headers, RequestOptions, Response } from '@angular/http';
+import { HttpClient, Headers, RequestOptions, Response } from '@angular/common/http';
 import { tokenNotExpired, JwtHelper } from 'angular2-jwt';
 import { User } from '../_models/User';
 

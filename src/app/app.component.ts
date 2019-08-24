@@ -8,7 +8,7 @@ import { User } from './_models/User';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent extends OnInit {
+export class AppComponent implements OnInit {
   title = 'dating app';
   jwtHelper: JwtHelper = new JwtHelper();
 

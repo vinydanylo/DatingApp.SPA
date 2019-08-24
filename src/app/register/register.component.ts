@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent extends OnInit {
+export class RegisterComponent implements OnInit {
   @Output() cancelRegister = new EventEmitter();
   user: User;
   registerForm: FormGroup;
@@ -27,7 +27,9 @@ export class RegisterComponent extends OnInit {
     private alertifyService: AlertifyService,
     private fb: FormBuilder,
     private router: Router
-  ) {}
+  ) {
+    super();
+  }
 
   ngOnInit() {
     this.bsConfig = {

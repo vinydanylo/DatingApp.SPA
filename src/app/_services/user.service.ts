@@ -3,14 +3,11 @@ import {throwError as observableThrowError,  Observable } from 'rxjs';
 
 import {catchError, map} from 'rxjs/operators';
 import { User } from '../_models/User';
-import { HttpClient, RequestOptions, Headers } from '@angular/http';
+import { HttpClient, RequestOptions, Headers } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 
-
-
 import { AuthHttp } from 'angular2-jwt';
-import { errorHandler } from '@angular/platform-browser/src/browser';
 
 @Injectable()
 export class UserService {

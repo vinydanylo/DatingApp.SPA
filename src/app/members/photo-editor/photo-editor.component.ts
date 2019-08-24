@@ -12,7 +12,7 @@ import * as _ from 'underscore';
   templateUrl: './photo-editor.component.html',
   styleUrls: ['./photo-editor.component.css']
 })
-export class PhotoEditorComponent extends OnInit {
+export class PhotoEditorComponent implements OnInit {
   @Input() photos: Photo[];
   uploader: FileUploader;
   hasBaseDropZoneOver = false;

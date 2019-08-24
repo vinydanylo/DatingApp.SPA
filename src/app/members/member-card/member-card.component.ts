@@ -6,7 +6,7 @@ import { User } from '../../_models/User';
   templateUrl: './member-card.component.html',
   styleUrls: ['./member-card.component.css']
 })
-export class MemberCardComponent extends OnInit {
+export class MemberCardComponent implements OnInit {
   @Input() user: User;
 
   constructor() { }

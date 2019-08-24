@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent extends OnInit {
+export class NavComponent implements OnInit {
   model: any = {};
   photoUrl: string;
 
