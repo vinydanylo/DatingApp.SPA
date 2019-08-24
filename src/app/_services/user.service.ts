@@ -1,6 +1,6 @@
 import { User } from '../_models/User';
 import { Observable } from 'rxjs/Rx';
-import { Http, RequestOptions, Headers } from '@angular/http';
+import { HttpClient, RequestOptions, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import 'rxjs/add/operator/map';

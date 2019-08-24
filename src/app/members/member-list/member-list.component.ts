@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './member-list.component.html',
   styleUrls: ['./member-list.component.css']
 })
-export class MemberListComponent implements OnInit {
+export class MemberListComponent extends OnInit {
   users: User[];
 
   constructor(private userService: UserService,

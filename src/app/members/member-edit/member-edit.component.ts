@@ -11,7 +11,7 @@ import { UserService } from '../../_services/user.service';
   templateUrl: './member-edit.component.html',
   styleUrls: ['./member-edit.component.css']
 })
-export class MemberEditComponent implements OnInit {
+export class MemberEditComponent extends OnInit {
   user: User;
   @ViewChild('editForm') editForm: NgForm;
   photoUrl: string;
